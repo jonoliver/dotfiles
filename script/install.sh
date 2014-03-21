@@ -1,8 +1,12 @@
 #!/bin/bash
 #cd ~
-mkdir $HOME/dotfiles #replace with git clone
+DOTFILES=$HOME/dotfiles
+mkdir $DOTFILES #replace with git clone
 
 # Create symbolic links
-ln -s $HOME/dotfiles/zshrc $HOME/.zshrc	
-ln -s $HOME/dotfiles/config/ssh $HOME/.ssh/config 
+ln -s $DOTFILES/zshrc $HOME/.zshrc	
+ln -s $DOTFILES/config/ssh $HOME/.ssh/config 
+
+# Make bin files executable
+chmod +x $DOTFILES/bin
 
