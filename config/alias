@@ -1,0 +1,60 @@
+# aliases
+#reload all config files
+alias rl="source $DOTFILES/zshrc && source $ENVFILE && source $ALIASFILE"
+#reload aliases
+alias arl="source $ALIASFILE"
+#edit aliases
+alias aed="$EDITOR $ALIASFILE"
+
+#quick cd
+#change to dotfiles directory
+alias dot="cd $DOTFILES"
+alias con="cd $CONFIG"
+alias doc="cd $HOME/Documents"
+
+
+# Finder
+# open finder in current dir
+alias o="open ."
+# show hidden files in finder
+alias sf="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder"
+# hide hidden files in finder
+alias hf="defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder"
+
+#Editor
+alias subl='$EDITOR'
+
+# Git
+# Most aliases are added by the oh-my-zsh git plugin
+alias gi='git init'
+
+#Tree
+alias t='tree'
+#show hidden files in tree
+alias ta='tree -a'
+
+#coffeescript
+#compile coffeescript w/ map
+alias c="coffee -cm"
+#compile coffeescript w/ map and watch
+alias cw="coffee -cmw"
+
+#web shortcuts
+alias gml="open https://mail.google.com"
+
+# functions
+
+# make a directory and cd into it
+mkcd() { mkdir -p "$@" && cd "$_"; }
+
+# open file in editor. if file doesnt exist, create it
+#TODO: ensure that folder structure gets created automatically if it doesnt exist
+#BUG: does not work with Vim
+edit() {
+  if ! [ -f "$@" ]
+    then
+      echo "Created $@"
+      touch "$@"
+  fi
+  $($EDITOR $@)
+}
