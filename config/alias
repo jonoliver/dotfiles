@@ -44,6 +44,10 @@ alias ni="sudo npm install"
 
 # Ruby
 alias gmi="sudo gem install"
+alias sc='script/console'
+alias sg='script/generate'
+alias sd='script/destroy'
+alias migr='rake db:migrate db:test:clone'
 
 # Coffeescript
 #compile coffeescript w/ map
