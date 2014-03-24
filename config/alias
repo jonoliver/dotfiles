@@ -1,4 +1,6 @@
 # aliases
+#display aliases
+alias al="alias"
 #reload all config files
 alias rl="source $DOTFILES/zshrc && source $ENVFILE && source $ALIASFILE"
 #reload aliases
@@ -32,6 +34,9 @@ alias gi='git init'
 alias t='tree'
 #show hidden files in tree
 alias ta='tree -a'
+
+# Less
+alias le="less"
 
 # Npm
 alias ns="npm start"
