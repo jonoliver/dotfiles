@@ -1,12 +1,14 @@
 # aliases
-#display aliases
+# display aliases
 alias al="alias"
-#reload all config files
+# reload all config files
 alias rl="source $DOTFILES/zshrc && source $ENVFILE && source $ALIASFILE"
-#reload aliases
+# reload aliases
 alias arl="source $ALIASFILE"
-#edit aliases
+# edit aliases
 alias aed='$EDITOR $ALIASFILE'
+# search aliases for pattern
+alias ag='alias | grep'
 
 # quick cd
 # change to dotfiles directory
@@ -29,6 +31,12 @@ alias subl='$EDITOR'
 # Git
 # Most aliases are added by the oh-my-zsh git plugin
 alias gi='git init'
+# Display all tracked files
+alias gt='git ls-tree -r master --name-only'
+# List git-ignored files
+alias gig='git ls-files . --ignored --exclude-standard --others'
+# List untracked files
+alias gut='git ls-files . --exclude-standard --others'
 
 # Tree
 alias t='tree'
