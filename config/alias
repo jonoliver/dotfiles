@@ -41,8 +41,10 @@ alias gut='git ls-files . --exclude-standard --others'
 
 # Tree
 alias t='tree'
-#show hidden files in tree
-alias ta='tree -a'
+# show hidden files in tree, excluding .git folder
+alias ta='tree -aI ".git"'
+# show hidden files in tree, including .git folder
+alias tag='tree -a'
 
 # Less
 alias le="less"
