@@ -1,2 +1,1 @@
-config/company
-config/ssh
+*.private

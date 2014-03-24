@@ -63,15 +63,15 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Company configuration
-if [ -f $CONFIG/user ]
+if [ -f $CONFIG/user.private ]
   then
-  . $CONFIG/user
+  . $CONFIG/user.private
 fi
 
 # User configuration
-if [ -f $CONFIG/company ]
+if [ -f $CONFIG/company.private ]
   then
-  . $CONFIG/company
+  . $CONFIG/company.private
 fi
 
 # Compilation flags
