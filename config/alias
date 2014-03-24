@@ -1,8 +1,9 @@
 # aliases
+
+# reload all config files
+alias rl="source $DOTFILES/zshrc && source $ENVFILE && source $ALIASFILE && srcprivate"
 # display aliases
 alias al="alias"
-# reload all config files
-alias rl="source $DOTFILES/zshrc && source $ENVFILE && source $ALIASFILE"
 # reload aliases
 alias arl="source $ALIASFILE"
 # edit aliases
@@ -72,8 +73,8 @@ alias gml="open https://mail.google.com"
 mkcd() { mkdir -p "$@" && cd "$_"; }
 
 # open file in editor. if file doesnt exist, create it
-#TODO: ensure that folder structure gets created automatically if it doesnt exist
-#BUG: does not work with Vim
+# TODO: ensure that folder structure gets created automatically if it doesnt exist
+# BUG: does not work with Vim
 edit() {
   if ! [ -f "$@" ]
     then
@@ -81,4 +82,12 @@ edit() {
       touch "$@"
   fi
   $($EDITOR $@)
+}
+
+# source private files
+srcprivate() {
+  for f in $CONFIG/*.private
+    do
+      . "$f"
+    done
 }
