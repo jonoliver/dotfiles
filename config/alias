@@ -4,7 +4,7 @@ alias rl="source $DOTFILES/zshrc && source $ENVFILE && source $ALIASFILE"
 #reload aliases
 alias arl="source $ALIASFILE"
 #edit aliases
-alias aed="$EDITOR $ALIASFILE"
+alias aed='$EDITOR $ALIASFILE'
 
 # quick cd
 # change to dotfiles directory
