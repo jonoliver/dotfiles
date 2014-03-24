@@ -6,8 +6,8 @@ DOTFILES=$HOME/dotfiles
 # Path to dotfiles/config
 CONFIG=$DOTFILES/config
 # Config files 
-ENVFILE=$CONFIG/env
-ALIASFILE=$CONFIG/alias
+ENVFILE=$CONFIG/env.zsh
+ALIASFILE=$CONFIG/alias.zsh
 
 # source config files
 . "$ENVFILE"
