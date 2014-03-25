@@ -16,17 +16,10 @@ cd $HOME
 echo "Installing tools/dependencies"
 #echo 'Installing homebrew...'
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-brew doctor
-brew update
 
-#echo 'Installing Git...'
-brew install git
-#brew install tmux
-#brew install wget
-#brew install tree
-#brew install ack
+# install brew packages
+brew bundle ~/dotfiles/Brewfile
 
-#brew install node
 #npm install -g grunt-cli
 #npm install -g yo
 
