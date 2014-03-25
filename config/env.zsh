@@ -1,8 +1,7 @@
 # Environment configuration
 # Contains PATH, default EDITOR
 
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.rvm/bin:$DOTFILES/bin"
-#PATH=$PATH:$HOME/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting | REMOVE THIS!
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.rvm/bin:$DOTFILES/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 EDITORLOCAL='/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
