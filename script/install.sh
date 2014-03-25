@@ -24,7 +24,7 @@ brew install git
 #brew install tmux
 #brew install wget
 #brew install tree
-
+#brew install ack
 
 #brew install node
 #npm install -g grunt-cli
@@ -39,9 +39,13 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 chsh -s /bin/zsh
 
-# backup any existing dotfiles folder
+# backup any existing dotfiles folder,.zshrc, etc...
 bak dotfiles
+bak ~.zshrc
+bak ~/.ssh/config
+
 git clone https://github.com/jonoliver/dotfiles.git
+
 
 # Create symbolic links
 ln -s $DOTFILES/zshrc $HOME/.zshrc	
