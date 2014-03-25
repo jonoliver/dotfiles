@@ -38,6 +38,8 @@ alias gt='git ls-tree -r master --name-only'
 alias gig='git ls-files . --ignored --exclude-standard --others'
 # List untracked files
 alias gut='git ls-files . --exclude-standard --others'
+# Git commit all with message
+alias gcam='git commit -vam'
 
 # Tree
 alias t='tree'
@@ -48,6 +50,9 @@ alias tag='tree -a'
 
 # Less
 alias le="less"
+
+# Tmux
+alias tm="tmux"
 
 # Npm
 alias ns="npm start"
