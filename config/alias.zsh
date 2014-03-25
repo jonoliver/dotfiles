@@ -98,3 +98,15 @@ srcprivate() {
       . "$f"
     done
 }
+
+# backup files/folders
+bak(){
+  i=1
+  name="$@.bak"
+  while [ -f "$name" ] || [ -d "$name" ]; do
+    echo "$name exists"
+    name="$@.bak.$i"
+    i=$((i+1))
+  done
+  cp -R "$@" "$name"
+}
