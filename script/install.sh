@@ -10,3 +10,4 @@ ln -s $DOTFILES/config/ssh $HOME/.ssh/config
 # Make bin files executable
 chmod +x $DOTFILES/bin
 
+#brew install tmux
