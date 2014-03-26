@@ -65,6 +65,13 @@ alias sg='script/generate'
 alias sd='script/destroy'
 alias migr='rake db:migrate db:test:clone'
 
+# RVM
+alias rvl='rvm list'
+alias rvc='rvm current'
+alias rvu='rvm use'
+alias rvd='rvm default'
+alias rvdu='rvm --default use'
+
 # Coffeescript
 #compile coffeescript w/ map
 alias c="coffee -cm"
