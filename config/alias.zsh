@@ -81,7 +81,19 @@ alias cw="coffee -cmw"
 # Web shortcuts
 alias gml="open https://mail.google.com"
 
+# Encoding
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
+alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
+
 # functions
+
+# google search from command line
+# Ex: ggl this is a search, no quotes necessary
+function ggl() { 
+  arg="$@"
+  encodedarg=`urlencode $arg`
+  open "https://www.google.com/search?hl=en#q=$encodedarg"
+}
 
 # make a directory and cd into it
 mkcd() { mkdir -p "$@" && cd "$_"; }
