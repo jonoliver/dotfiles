@@ -9,7 +9,7 @@ CONFIG=$DOTFILES/config
 ENVFILE=$CONFIG/env.zsh
 ALIASFILE=$CONFIG/alias.zsh
 
-# source config files
+# Load config files
 . "$ENVFILE"
 . "$ALIASFILE"
 
@@ -62,8 +62,18 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# load private config files (ex: user.private)
-srcprivate
+# Load all .zsh files from config folder,
+# excluding env.zsh and alias.zsh, which are loaded above
+sourcezsh() {
+  for f in $CONFIG/*.zsh
+    do
+      if ! [ $f = $ENVFILE ] && ! [ $f = $ALIASFILE ]
+        then
+          source "$f"
+      fi
+    done
+}
+sourcezsh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

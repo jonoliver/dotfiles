@@ -111,14 +111,6 @@ edit() {
   $($EDITOR $@)
 }
 
-# source private files
-srcprivate() {
-  for f in $CONFIG/*.private.zsh
-    do
-      . "$f"
-    done
-}
-
 # backup files/folders
 bak(){
   i=1
