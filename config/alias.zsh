@@ -27,7 +27,7 @@ alias sf="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder
 alias hf="defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder"
 
 # Editor
-alias subl='$EDITOR'
+alias edit='$EDITOR'
 
 # Git
 # Most aliases are added by the oh-my-zsh git plugin
@@ -102,7 +102,7 @@ mkcd() { mkdir -p "$@" && cd "$_"; }
 # open file in editor. if file doesnt exist, create it
 # TODO: ensure that folder structure gets created automatically if it doesnt exist
 # BUG: does not work with Vim
-edit() {
+edits() {
   if ! [ -f "$@" ]
     then
       echo "Created $@"
