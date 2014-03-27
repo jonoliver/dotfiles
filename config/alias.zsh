@@ -60,6 +60,7 @@ alias ni="sudo npm install"
 
 # Ruby
 alias gmi="sudo gem install"
+alias gmin="sudo gem install --no-ri --no-rdoc"
 alias sc='script/console'
 alias sg='script/generate'
 alias sd='script/destroy'
