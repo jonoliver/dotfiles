@@ -72,7 +72,7 @@ bak(){
     name="$@.bak.$i"
     i=$((i+1))
   done
-  cp -R "$@" "$name"
+  mv "$@" "$name"
 }
 
 echo "Installing tools/dependencies"
