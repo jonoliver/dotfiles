@@ -40,6 +40,8 @@ alias gig='git ls-files . --ignored --exclude-standard --others'
 alias gut='git ls-files . --exclude-standard --others'
 # Git commit all with message
 alias gcam='git commit -vam'
+# Push to master
+alias gpmo='git push origin master'
 
 # Tree
 alias t='tree'
