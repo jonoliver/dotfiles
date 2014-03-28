@@ -14,7 +14,7 @@ install_ruby(){
 
 install_rubygems(){
   echo 'Installing ruby gems...'
-  gem install rails
+  gem install --no-ri --no-rdoc rails
 }
 
 install_homebrew(){
@@ -30,10 +30,10 @@ install_npm(){
   npm install -g grunt-cli
   npm install -g yo
 
-  npm install coffee-script
-  npm install mongodb
-  npm install express
-  npm install mocha
+  npm install -g coffee-script
+  npm install -g mongodb
+  npm install -g express
+  npm install -g mocha
 }
 
 install_zsh(){
@@ -76,10 +76,11 @@ bak(){
 }
 
 echo "Installing tools/dependencies"
-#install_ruby
-#install_rubygems
-#install_homebrew
-#install_npm
+install_ruby
+install_rubygems
+install_homebrew
+install_npm
+
 install_zsh
 install_dotfiles
 
