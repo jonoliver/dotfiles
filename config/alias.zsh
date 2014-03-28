@@ -36,7 +36,7 @@ alias gi='git init'
 alias gt='git ls-tree -r master --name-only'
 # List git-ignored files
 alias gig='git ls-files . --ignored --exclude-standard --others'
-# List untracked files
+# List untracked fil
 alias gut='git ls-files . --exclude-standard --others'
 # Git commit all with message
 alias gcam='git commit -vam'
@@ -85,6 +85,9 @@ alias gml="open https://mail.google.com"
 # Encoding
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
 alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
+
+# Make all files in dotfiles/bin executable
+alias binx="chmod +x $DOTFILES/bin/*"
 
 # functions
 
