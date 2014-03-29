@@ -91,6 +91,9 @@ alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.
 # Make all files in dotfiles/bin executable
 alias binx="chmod +x $DOTFILES/bin/*"
 
+# SSH
+alias compile-ssh-config='echo -n > ~/.ssh/config && cat $DOTFILES/config/*.ssh > ~/.ssh/config'
+
 # functions
 
 # google search from command line
