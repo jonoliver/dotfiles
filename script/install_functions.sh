@@ -64,6 +64,10 @@ install_dotfiles(){
   chmod +x $DOTFILES/bin
 }
 
+install_ssh(){
+  compile-ssh-config
+}
+
 bak(){
   i=1
   name="$@.bak"
