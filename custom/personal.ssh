@@ -1,0 +1,5 @@
+Host personal
+    HostName joliver.net
+    #Port 80
+    User jonoliver
+    IdentityFile ~/.ssh/personal_rsa
