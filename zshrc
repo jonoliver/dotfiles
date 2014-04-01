@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh.bak
 
 # Path to dotfiles
 DOTFILES=$HOME/dotfiles
@@ -17,8 +17,8 @@ ALIASFILE=$CONFIG/alias.zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
-
+ZSH_THEME="joncustom"
+ZSH_CUSTOM="$DOTFILES/custom"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -62,23 +62,25 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Load all .zsh files from config folder,
-# excluding env.zsh and alias.zsh, which are loaded above
-sourcezsh() {
-  for f in $CONFIG/*.zsh
-    do
-      if ! [ $f = $ENVFILE ] && ! [ $f = $ALIASFILE ]
-        then
-          source "$f"
-      fi
-    done
-}
-sourcezsh
+# User configuration
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.rvm/bin:$DOTFILES/bin"
+#export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
 
+EDITORLOCAL='/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
+EDITORREMOTE='vim'
+
+# # Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR=$EDITORREMOTE
+else
+  export EDITOR=$EDITORLOCAL
+fi
 # Load rvm
 if [[ -s $HOME/.rvm/scripts/rvm ]]; then
   source $HOME/.rvm/scripts/rvm;
 fi
+
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
