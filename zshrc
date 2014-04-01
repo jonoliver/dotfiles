@@ -1,28 +1,13 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh.bak
-
+ZSH=$HOME/.oh-my-zsh
 # Path to dotfiles
 DOTFILES=$HOME/dotfiles
-# Path to dotfiles/config
-CONFIG=$DOTFILES/config
-# Config files 
-ENVFILE=$CONFIG/env.zsh
-ALIASFILE=$CONFIG/alias.zsh
-
-# Load config files
-. "$ENVFILE"
-. "$ALIASFILE"
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="joncustom"
 ZSH_CUSTOM="$DOTFILES/custom"
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
