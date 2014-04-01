@@ -1,3 +1,6 @@
+# Config files 
+ALIASFILE=$ZSH_CUSTOM/alias.zsh
+
 # aliases
 
 # reload all config files
@@ -28,6 +31,9 @@ alias hf="defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finde
 
 # Editor
 alias edit='$EDITOR'
+
+alias zshrc="edit $DOTFILES/zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Git
 # Most aliases are added by the oh-my-zsh git plugin
