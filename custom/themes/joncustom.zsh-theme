@@ -1,21 +1,52 @@
+machine_details(){
+  local output=''
+  if [ "$THEME_USERNAME" = true ]; then
+    output+='%n'
+  fi
+
+  if [ "$THEME_MACHINENAME" = true ]; then
+    if [ ! "$output" = '' ]; then
+      output+='@'
+    fi
+    output+='%m'
+  fi
+
+  if [ ! "$output" = '' ]; then
+    echo "$output "
+  fi
+}
+
 show_ruby_version(){
 # based on eastwood theme(s)
 # RVM settings
 if [[ -s ~/.rvm/scripts/rvm ]] ; then 
-  RPS1="%{$fg[yellow]%}%{$reset_color%}%{$fg[red]%}\$(~/.rvm/bin/rvm-prompt)%{$reset_color%} $EPS1"
+  echo "%{$fg[yellow]%}%{$reset_color%}%{$fg[yellow]%}\$(~/.rvm/bin/rvm-prompt)%{$reset_color%}"
 else
   if which rbenv &> /dev/null; then
-    RPS1="%{$fg[yellow]%}%{$reset_color%}%{$fg[red]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$reset_color%} $EPS1"
+    echo "%{$fg[yellow]%}%{$reset_color%}%{$fg[red]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$reset_color%}"
   fi
 fi  
 }
 
-showtime(){
-  RPS1="%{$fg[red]%}%w %t%{$reset_color%}"
+right_prompt(){
+  local output=''
+
+  if [ "$THEME_RUBYVERSION" = true ]; then
+    output+="$(show_ruby_version)"
+  fi
+
+  if [ "$THEME_DATETIME" = true ]; then
+    if [ ! "$output" = '' ]; then
+      output+='  '
+    fi
+    output+="%{$fg[red]%}%w %t%{$reset_color%}"
+  fi
+
+  output+=" $EPS1"
+  echo $output
 }
 
-#show_ruby_version
-showtime
+RPS1="$(right_prompt)"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
@@ -28,8 +59,16 @@ git_custom_status() {
   if [ -n "$cb" ]; then
     echo "$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
+  if [ "$SHOWTIME" = true ]; then
+    echo 'test'
+  fi
 }
 
-local ret_status="%(?:%{$fg[green]%}❯:%{$fg[red]%}❯)"
+local ret_status="%(?:%{$fg[green]%}❯:%{$fg[red]%}❯)%{$reset_color%}"
 PROMPT='%{$fg[cyan]%}%~%  %{$reset_color%}$(git_custom_status) 
-$ret_status '
+$(machine_details)$ret_status '
+
+#SHOWTIME=false
+if [ "$SHOWTIME" ]; then
+  echo 'test'
+fi
