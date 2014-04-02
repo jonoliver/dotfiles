@@ -15,7 +15,7 @@ This will do the following:
   
 ####That's nice, but let's install some cool stuff!
 ```
-./~/dotfiles/script/install_tools
+dot && ./script/tool_installer.sh
 ```
 This will install lots of useful stuff, including:
 
