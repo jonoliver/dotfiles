@@ -24,8 +24,22 @@ install_homebrew(){
   echo 'Installing homebrew...'
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
+  # Make sure we’re using the latest Homebrew
+  brew update
+
+  # Upgrade any already-installed formulae
+  brew upgrade
+
   echo 'Installing homebrew packages'
-  brew bundle ~/dotfiles/Brewfile
+
+  for pkg in $@; do
+    brew install $pkg
+  done  
+
+  brew tap homebrew/versions
+
+  # Remove outdated versions from the cellar
+  brew cleanup 
 }
 
 install_npm_global(){
