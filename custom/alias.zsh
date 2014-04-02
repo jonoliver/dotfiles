@@ -17,7 +17,7 @@ alias ag='alias | grep'
 # quick cd
 # change to dotfiles directory
 alias dot="cd $DOTFILES"
-alias con="cd $CONFIG"
+alias cust="cd $ZSH_CUSTOM"
 alias doc="cd $HOME/Documents"
 
 
