@@ -52,16 +52,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
-EDITORLOCAL='/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
-EDITORREMOTE='vim'
-
-# # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR=$EDITORREMOTE
-else
-  export EDITOR=$EDITORLOCAL
-fi
-# Load rvm
 if [[ -s $HOME/.rvm/scripts/rvm ]]; then
   source $HOME/.rvm/scripts/rvm;
 fi

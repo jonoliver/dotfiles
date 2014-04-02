@@ -20,19 +20,20 @@ show_ruby_version(){
 # based on eastwood theme(s)
 # RVM settings
 if [[ -s ~/.rvm/scripts/rvm ]] ; then 
-  echo "%{$fg[yellow]%}%{$reset_color%}%{$fg[yellow]%}\$(~/.rvm/bin/rvm-prompt)%{$reset_color%}"
+  echo $(~/.rvm/bin/rvm-prompt)
 else
   if which rbenv &> /dev/null; then
-    echo "%{$fg[yellow]%}%{$reset_color%}%{$fg[red]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$reset_color%}"
+    echo $(rbenv version | sed -e 's/ (set.*$//')
   fi
 fi  
 }
 
 right_prompt(){
   local output=''
-
   if [ "$THEME_RUBYVERSION" = true ]; then
-    output+="$(show_ruby_version)"
+    output+="%{$fg[yellow]%}"
+    output+=$(show_ruby_version)
+    output+="%{$reset_color%}"
   fi
 
   if [ "$THEME_DATETIME" = true ]; then
@@ -46,7 +47,7 @@ right_prompt(){
   echo $output
 }
 
-RPS1="$(right_prompt)"
+RPS1='$(right_prompt)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
