@@ -100,6 +100,13 @@ alias binx="chmod +x $DOTFILES/bin/*"
 # SSH
 alias compile-ssh-config='echo -n > ~/.ssh/config && cat $DOTFILES/config/*.ssh > ~/.ssh/config'
 
+# System utilities
+# display disk usage in human readable format
+alias dfh='df -H'
+# show history, sorted by usage
+alias hu='historyusage'
+historyusage(){ history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r }
+
 # functions
 
 # google search from command line
