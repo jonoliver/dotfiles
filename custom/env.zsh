@@ -38,7 +38,7 @@ defaultenv(){
 rubyenv(){
   defaultenv
 
-  EDITORLOCAL='vim'
+  #EDITORLOCAL='vim'
   THEME_RUBYVERSION=true
 
   seteditor
