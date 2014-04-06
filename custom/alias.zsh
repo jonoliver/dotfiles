@@ -107,6 +107,9 @@ alias dfh='df -H'
 alias hu='historyusage'
 historyusage(){ history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r }
 
+# search hash
+alias hg="hash | grep"
+
 # functions
 
 # google search from command line
