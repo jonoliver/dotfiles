@@ -110,6 +110,12 @@ historyusage(){ history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|un
 # search hash
 alias hg="hash | grep"
 
+# Browser shortcuts
+
+# Open github (must set GH_USERNAME variable)
+# Accepts argument for project
+alias gh=github
+github(){ open "https://github.com/$GH_USERNAME/$@" }
 # functions
 
 # google search from command line
