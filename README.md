@@ -21,7 +21,7 @@ dot && ./script/tool_installer.sh
 The above command will install lots of useful stuff, including:
 
 - [RVM](https://rvm.io/)
-  - Latest Ruby
+  - Latest [Ruby](https://www.ruby-lang.org/en/)
 - [Homebrew](http://brew.sh/)
   - [git](http://git-scm.com/)
   - [wget](https://www.gnu.org/software/wget/)
