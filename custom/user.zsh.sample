@@ -1,0 +1,9 @@
+GH_USERNAME='your_github_username'
+DEFAULT_EDITOR='subl'
+DEFAULT_EDITOR_REMOTE='vim'
+
+# set your startup environment
+defaultenv
+
+# Don't annoy me with beeps plz
+unsetopt beep
