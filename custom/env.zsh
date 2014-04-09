@@ -4,6 +4,9 @@
 #THEME_RUBYVERSION=true
 #THEME_DATETIME=true
 
+DEFAULT_EDITOR='mvim'
+DEFAULT_EDITOR_REMOTE='vim'
+
 seteditor(){
   # Preferred editor for local and remote sessions
   if [[ -n $SSH_CONNECTION ]]; then
@@ -29,8 +32,8 @@ setenv(){
 }
 
 defaultenv(){
-  EDITORLOCAL='/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
-  EDITORREMOTE='vim'
+  EDITORLOCAL="$DEFAULT_EDITOR"
+  EDITORREMOTE="$DEFAULT_EDITOR_REMOTE"
   seteditor
   setenv
 }
