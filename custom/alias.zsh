@@ -50,6 +50,8 @@ alias gcam='git commit -vam'
 alias gpom='git push origin master'
 # Fetch
 alias gf='git fetch'
+# Fetch and merge upstream
+alias gum='git fetch upstream && git merge upstream/master'
 
 # Tree
 alias t='tree'
