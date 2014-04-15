@@ -47,7 +47,7 @@ alias gut='git ls-files . --exclude-standard --others'
 # Git commit all with message
 alias gcam='git commit -vam'
 # Push to master
-alias gpmo='git push origin master'
+alias gpom='git push origin master'
 # Fetch
 alias gf='git fetch'
 
