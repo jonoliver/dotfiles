@@ -113,6 +113,9 @@ historyusage(){ history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|un
 # search hash
 alias hg="hash | grep"
 
+#find file by name
+alias f="find . -name "
+
 # Browser shortcuts
 
 # Open github (must set GH_USERNAME variable)
