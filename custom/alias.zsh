@@ -1,4 +1,4 @@
-# Config files 
+# Config files
 ALIASFILE=$ZSH_CUSTOM/alias.zsh
 
 # aliases
@@ -81,6 +81,9 @@ alias rvu='rvm use'
 alias rvd='rvm default'
 alias rvdu='rvm --default use'
 
+#rails
+alias ss='rails server'
+
 # Coffeescript
 #compile coffeescript w/ map
 alias c="coffee -cm"
@@ -120,7 +123,7 @@ github(){ open "https://github.com/$GH_USERNAME/$@" }
 
 # google search from command line
 # Ex: ggl this is a search, no quotes necessary
-function ggl() { 
+function ggl() {
   arg="$@"
   encodedarg=`urlencode $arg`
   open "https://www.google.com/search?hl=en#q=$encodedarg"
