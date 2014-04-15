@@ -42,7 +42,7 @@ alias gi='git init'
 alias gt='git ls-tree -r master --name-only'
 # List git-ignored files
 alias gig='git ls-files . --ignored --exclude-standard --others'
-# List untracked fil
+# List untracked files
 alias gut='git ls-files . --exclude-standard --others'
 # Git commit all with message
 alias gcam='git commit -vam'
