@@ -52,6 +52,8 @@ alias gpom='git push origin master'
 alias gf='git fetch'
 # Fetch and merge upstream
 alias gum='git fetch upstream && git merge upstream/master'
+# Show diff of a commit
+alias gs='git show'
 
 # Tree
 alias t='tree'

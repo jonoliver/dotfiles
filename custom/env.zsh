@@ -6,6 +6,7 @@
 
 DEFAULT_EDITOR='mvim'
 DEFAULT_EDITOR_REMOTE='vim'
+GIT_EDITOR='vim'
 
 seteditor(){
   # Preferred editor for local and remote sessions
