@@ -54,6 +54,8 @@ alias gf='git fetch'
 alias gum='git fetch upstream && git merge upstream/master'
 # Show diff of a commit
 alias gs='git show'
+# Show diff of a commit (filenames only)
+alias gsn='git show --name-only'
 
 # Tree
 alias t='tree'
@@ -163,4 +165,7 @@ bak(){
     i=$((i+1))
   done
   cp -R "$@" "$name"
+}
+gdno(){
+   git diff "$@" --name-only
 }
