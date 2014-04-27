@@ -124,6 +124,11 @@ alias hg="hash | grep"
 #find file by name
 alias f="find . -name "
 
+#start mysql
+alias sql="mysql.server start"
+#stop mysql
+alias ssql="mysql.server stop"
+
 # Browser shortcuts
 
 # Open github (must set GH_USERNAME variable)
