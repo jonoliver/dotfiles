@@ -48,4 +48,8 @@ rubyenv(){
   seteditor
 }
 
+rebaseenv(){
+  EDITOR='vim'
+}
+
 defaultenv
