@@ -91,6 +91,14 @@ alias rvdu='rvm --default use'
 
 #rails
 alias ss='rails server'
+alias rc='rails console'
+alias rg='rails generate'
+
+#rake
+alias dbm='rake db:migrate'
+alias dbs='rake db:seed'
+alias dbd='rake db:drop'
+alias dbc='rake db:create'
 
 # Coffeescript
 #compile coffeescript w/ map

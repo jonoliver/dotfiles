@@ -42,7 +42,7 @@ The above command will install lots of useful stuff, including:
 The `/custom` directory is used to override the default oh-my-zsh functionality. Any configuration files added to this directory with a `.zsh` extension will automtically be loaded when the Terminal is started. More information can be found in the [oh-my-zsh README](https://github.com/robbyrussell/oh-my-zsh#customization).
 
 #####Environment
-[`env.zsh`](https://github.com/jonoliver/dotfiles/blob/master/custom/env.zsh) contains configuration settings related to environment and theme. You can modify this file to change how your Terminal looks and acts based on your environment. For example, you can set different editors based on whether running a local or remote SSH session.
+[`env.zsh`](https://github.com/jonoliver/dotfiles/blob/master/custom/env.zsh) contains configuration settings related to environment and theme. You can modify this file to change how your Terminal looks and acts based on your environment.
 
 You can also define functions to change these settings based on the type of coding environment you are working in. For example, running `rubyenv` will customize the Terminal for a Ruby environment, changing your editor and displaying the Ruby version in the prompt (if running RVM or rbenv). Running `defaultenv` will restore the original default settings.
 
