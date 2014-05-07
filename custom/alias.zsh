@@ -14,6 +14,9 @@ alias aed='$EDITOR $ALIASFILE'
 # search aliases for pattern
 alias ag='alias | grep'
 
+# search history
+alias hg='history | grep'
+
 # quick cd
 # change to dotfiles directory
 alias dot="cd $DOTFILES"
@@ -127,7 +130,7 @@ alias hu='historyusage'
 historyusage(){ history|awk '{print $2}'|awk 'BEGIN {FS="|"} {print $1}'|sort|uniq -c|sort -r }
 
 # search hash
-alias hg="hash | grep"
+alias hshg="hash | grep"
 
 #find file by name
 alias f="find . -name "
