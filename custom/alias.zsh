@@ -13,7 +13,8 @@ alias arl="source $ALIASFILE"
 alias aed='$EDITOR $ALIASFILE'
 # search aliases for pattern
 alias ag='alias | grep'
-
+# display history
+alias hi='history'
 # search history
 alias hg='history | grep'
 
@@ -37,6 +38,8 @@ alias edit='$EDITOR'
 
 alias zshrc="edit $DOTFILES/zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias cl="clear"
 
 # Git
 # Most aliases are added by the oh-my-zsh git plugin
@@ -102,6 +105,14 @@ alias dbm='rake db:migrate'
 alias dbs='rake db:seed'
 alias dbd='rake db:drop'
 alias dbc='rake db:create'
+
+# rspec
+alias rsp='rspec -c -t "~js"'
+alias rspd='rspec -cfd -t "~js"'
+alias rspjs='rspec -c'
+alias rspjsd='rspec -cfd'
+alias rspw='rspec -c -t wip'
+alias rspwd='rspec -cfd -t wip'
 
 # Coffeescript
 #compile coffeescript w/ map
@@ -184,4 +195,12 @@ bak(){
 }
 gdno(){
    git diff "$@" --name-only
+}
+
+trep(){
+  while [ "true" ]
+    do
+      clear && tree "$@"
+      sleep 1
+    done
 }
