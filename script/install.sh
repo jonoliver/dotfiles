@@ -32,13 +32,15 @@ install_dotfiles(){
   # backup any existing dotfiles folder,.zshrc, etc...
   bak $HOME/dotfiles
   bak $HOME/.zshrc
+  bak $HOME/.tmux.conf
   #bak $HOME/.ssh/config
 
   git clone https://github.com/jonoliver/dotfiles.git $DOT
 
   # Create symbolic links
-  ln -s $DOT/zshrc $HOME/.zshrc  
-  #ln -s $HOME/config/ssh $HOME/.ssh/config 
+  ln -s $DOT/zshrc $HOME/.zshrc
+  ln -s $DOT/tmux/tmux.conf $HOME/.tmux.conf
+  #ln -s $HOME/config/ssh $HOME/.ssh/config
 
   # Make bin files executable
   #chmod +x $DOTFILES/bin

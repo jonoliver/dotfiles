@@ -24,7 +24,6 @@ alias dot="cd $DOTFILES"
 alias cust="cd $ZSH_CUSTOM"
 alias doc="cd $HOME/Documents"
 
-
 # Finder
 # open finder in current dir
 alias o="open ."
@@ -75,6 +74,10 @@ alias le="less"
 
 # Tmux
 alias tm="tmux"
+alias tmr="tmuxinator"
+alias tmk="tmux kill-session -t"
+#kill all tmux sessions
+# alias tmk="tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}"
 
 # Npm
 alias ns="npm start"
@@ -180,6 +183,10 @@ edits() {
       touch "$@"
   fi
   $($EDITOR $@)
+}
+
+function new(){
+  mkcd $@ && git init && edit
 }
 
 # backup files/folders
