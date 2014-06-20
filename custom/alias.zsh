@@ -38,7 +38,7 @@ alias edit='$EDITOR'
 alias zshrc="edit $DOTFILES/zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias cl="clear"
+alias c="clear"
 
 # Git
 # Most aliases are added by the oh-my-zsh git plugin
@@ -119,7 +119,7 @@ alias rspwd='rspec -cfd -t wip'
 
 # Coffeescript
 #compile coffeescript w/ map
-alias c="coffee -cm"
+alias co="coffee -cm"
 #compile coffeescript w/ map and watch
 alias cw="coffee -cmw"
 
