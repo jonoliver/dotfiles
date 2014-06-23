@@ -61,7 +61,7 @@ alias gum='git fetch upstream && git merge upstream/master'
 alias gs='git show'
 # Show diff of a commit (filenames only)
 alias gsn='git show --name-only'
-
+alias i='tig'
 # Tree
 alias t='tree'
 # show hidden files in tree, excluding .git folder
