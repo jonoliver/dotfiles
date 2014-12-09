@@ -99,11 +99,13 @@ alias rvd='rvm default'
 alias rvdu='rvm --default use'
 
 #rails
-alias ss='rails server'
+alias ss='bundle exec rails server'
 alias rc='rails console'
 alias rg='rails generate'
 
 #rake
+alias be='bundle exec'
+alias rake='noglob rake'
 alias dbm='rake db:migrate'
 alias dbs='rake db:seed'
 alias dbd='rake db:drop'
