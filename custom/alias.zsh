@@ -51,12 +51,14 @@ alias gig='git ls-files . --ignored --exclude-standard --others'
 alias gut='git ls-files . --exclude-standard --others'
 # Git commit all with message
 alias gcam='git commit -vam'
-# Push to master
-alias gpom='git push origin master'
+# Push to origin
+alias gpo='git push origin'
 # Fetch
 alias gf='git fetch'
-# Fetch and merge upstream
+# Fetch and merge upstream master
 alias gum='git fetch upstream && git merge upstream/master'
+# Fetch and merge upstream master
+alias gom='git fetch origin && git merge origin /master'
 # Show diff of a commit
 alias gs='git show'
 # Show diff of a commit (filenames only)
@@ -76,6 +78,7 @@ alias le="less"
 alias tm="tmux"
 alias tmr="tmuxinator"
 alias tmk="tmux kill-session -t"
+alias tmka="killall tmux"
 #kill all tmux sessions
 # alias tmk="tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}"
 
