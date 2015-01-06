@@ -8,6 +8,9 @@ DEFAULT_EDITOR='mvim'
 DEFAULT_EDITOR_REMOTE='vim'
 GIT_EDITOR='vim'
 
+# change grep color back to green
+export GREP_COLOR='1;32'
+
 seteditor(){
   # Preferred editor for local and remote sessions
   if [[ -n $SSH_CONNECTION ]]; then
