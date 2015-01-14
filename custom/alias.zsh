@@ -65,6 +65,8 @@ alias gs='git show'
 alias gsn='git show --name-only'
 alias i='tig'
 # Tree
+#always use color
+alias tree='tree -C'
 alias t='tree'
 # show hidden files in tree, excluding .git folder
 alias ta='tree -aI ".git"'
