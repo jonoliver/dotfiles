@@ -27,6 +27,10 @@
     'prefix': 'di'
     'body': 'def inititalize$1\n\t$2\nend'
 
+  'class … end':
+    'prefix': 'c'
+    'body': 'class ${1:class_name}\n\t$0\nend'
+    
   'puts dbg':
     'prefix': 'dbg'
     'body': 'puts "[DBG]: ${1:!!!}"'
