@@ -1,0 +1,26 @@
+"*":
+  editor:
+    invisibles: {}
+    autoIndentOnPaste: false
+    fontSize: 12
+  core:
+    ignoredNames: [
+      ".git"
+      ".svn"
+      ".DS_Store"
+    ]
+    excludeVcsIgnoredPaths: false
+    audioBeep: false
+    disabledPackages: [
+      "whitespace"
+    ]
+  "exception-reporting":
+    userId: "98b994f2-1497-905f-27ac-795c038cbf20"
+  "release-notes":
+    viewedVersion: "0.94.0"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "39208c20f44461f81ce19dbe0f2acac563944366"
+  "tree-view":
+    hideVcsIgnoredFiles: true
