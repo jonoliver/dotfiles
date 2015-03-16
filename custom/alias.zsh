@@ -13,6 +13,8 @@ alias arl="source $ALIASFILE"
 alias aed='$EDITOR $ALIASFILE'
 # search aliases for pattern
 alias ag='alias | grep'
+# search processes
+alias psg='ps -ef | grep'
 # display history
 alias hi='history'
 # search history
@@ -25,8 +27,8 @@ alias cust="cd $ZSH_CUSTOM"
 alias doc="cd $HOME/Documents"
 
 # Finder
-# open finder in current dir
-alias o="open ."
+# open files or directories
+o(){ open ${1:-.} }
 # show hidden files in finder
 alias sf="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder"
 # hide hidden files in finder
@@ -39,7 +41,7 @@ alias zshrc="edit $DOTFILES/zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias c="clear"
-
+alias l='ls -lAh'
 # Git
 # Most aliases are added by the oh-my-zsh git plugin
 alias gi='git init'
@@ -65,6 +67,8 @@ alias gs='git show'
 alias gsn='git show --name-only'
 alias i='tig'
 # Tree
+#always use color
+alias tree='tree -C'
 alias t='tree'
 # show hidden files in tree, excluding .git folder
 alias ta='tree -aI ".git"'
@@ -79,6 +83,8 @@ alias tm="tmux"
 alias tmr="tmuxinator"
 alias tmk="tmux kill-session -t"
 alias tmka="killall tmux"
+# copy to clipboard
+alias tmc="tmux save-buffer - | reattach-to-user-namespace pbcopy"
 #kill all tmux sessions
 # alias tmk="tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}"
 
