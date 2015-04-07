@@ -56,7 +56,9 @@ if [[ -s $HOME/.rvm/scripts/rvm ]]; then
   source $HOME/.rvm/scripts/rvm;
 fi
 
-eval "$(rbenv init -)"
+if [ -d "$HOME/.rbenv" ]; then
+  eval "$(rbenv init -)"
+fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
