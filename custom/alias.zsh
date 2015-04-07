@@ -171,6 +171,7 @@ alias ssql="mysql.server stop"
 # Accepts argument for project
 alias gh=github
 github(){ open "https://github.com/$GH_USERNAME/$@" }
+alias hb='hub browse'
 # functions
 
 # google search from command line
