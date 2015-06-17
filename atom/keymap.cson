@@ -26,3 +26,9 @@
   'ctrl-l': 'core:move-right'
   'ctrl-j': 'core:move-down'
   'ctrl-k': 'core:move-up'
+  
+#workaround for emmet mapping of expand-abbreviation
+'.editor:not(.mini)':
+  'ctrl-e': 'unset!'                           # remove all bindings
+  'ctrl-e': 'editor:move-to-end-of-line'       # remap core binding
+  'alt-cmd-e' : 'emmet:expand-abbreviation'    # alternate binding for emmet
