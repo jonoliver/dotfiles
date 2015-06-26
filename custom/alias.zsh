@@ -65,6 +65,7 @@ alias gom='git fetch origin && git merge origin /master'
 alias gs='git show'
 # Show diff of a commit (filenames only)
 alias gsn='git show --name-only'
+alias gdc='git diff --cached'
 alias i='tig'
 # Tree
 #always use color
