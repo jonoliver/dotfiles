@@ -24,3 +24,4 @@
     userId: "39208c20f44461f81ce19dbe0f2acac563944366"
   "tree-view":
     hideVcsIgnoredFiles: true
+  linter: {}
