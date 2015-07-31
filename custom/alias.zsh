@@ -34,9 +34,6 @@ alias sf="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder
 # hide hidden files in finder
 alias hf="defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder"
 
-# Editor
-alias edit='$EDITOR'
-
 alias zshrc="edit $DOTFILES/zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -202,6 +199,10 @@ function new(){
   mkcd $@ && git init && edit
 }
 
+# open editor (accepts dir/file as argument, otherwise opens at current dir)
+edit(){ $($EDITOR ${@:-'.'}) }
+alias e="edit"
+
 # backup files/folders
 bak(){
   i=1
@@ -224,3 +225,4 @@ trep(){
       sleep 1
     done
 }
+
