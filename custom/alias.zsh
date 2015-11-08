@@ -225,4 +225,16 @@ trep(){
       sleep 1
     done
 }
-
+NOTEDOC=~/notes
+notes(){
+  touch $NOTEDOC
+  cat -n $NOTEDOC
+}
+note(){
+  echo $@ >> $NOTEDOC
+  notes
+}
+noted(){
+  sed -i.bak "$@d" "$NOTEDOC"
+  notes
+}
