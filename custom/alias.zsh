@@ -82,7 +82,7 @@ alias tmr="tmuxinator"
 alias tmk="tmux kill-session -t"
 alias tmka="killall tmux"
 # copy to clipboard
-alias tmc="tmux save-buffer - | reattach-to-user-namespace pbcopy"
+alias tmc="tmux showb | pbcopy"
 #kill all tmux sessions
 # alias tmk="tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}"
 
@@ -225,6 +225,16 @@ trep(){
       sleep 1
     done
 }
+
+# create file and corresponding spec in rails project
+edit_with_spec(){
+  edits $@
+  spec_file=`echo $@ | sed s/app/spec/ | sed s/\.rb/_spec\.rb/`
+  edits $spec_file
+}
+alias ews="edit_with_spec"
+
+# Note taking
 NOTEDOC=~/notes
 notes(){
   touch $NOTEDOC
