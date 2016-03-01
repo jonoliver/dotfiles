@@ -117,6 +117,10 @@ alias dbm='rake db:migrate'
 alias dbs='rake db:seed'
 alias dbd='rake db:drop'
 alias dbc='rake db:create'
+alias rr='bundle exec rake'
+alias rsa='bundle exec rake spec:all'
+alias rsi='bundle exec rake spec:integration'
+alias rst='bundle exec rake teaspoon'
 
 # rspec
 alias rsp='rspec -c -t "~js"'
