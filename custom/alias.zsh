@@ -123,7 +123,7 @@ alias rsi='bundle exec rake spec:integration'
 alias rst='bundle exec rake teaspoon'
 
 # rspec
-alias rsp='rspec -c -t "~js"'
+alias rsp='bundle exec rspec'
 alias rspd='rspec -cfd -t "~js"'
 alias rspjs='rspec -c'
 alias rspjsd='rspec -cfd'
