@@ -73,7 +73,7 @@ alias t='tree'
 alias ta='tree -aI ".git"'
 # show hidden files in tree, including .git folder
 alias tag='tree -a'
-
+alias gsta='git stash'
 # Less
 alias le="less"
 
