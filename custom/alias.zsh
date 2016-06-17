@@ -52,6 +52,7 @@ alias gut='git ls-files . --exclude-standard --others'
 alias gcam='git commit -vam'
 # Push to origin
 alias gpo='git push origin'
+alias gpu='git push -u'
 # Fetch
 alias gf='git fetch'
 # Fetch and merge upstream master
@@ -228,6 +229,17 @@ trep(){
       clear && tree "$@"
       sleep 1
     done
+}
+
+# find and replace
+# Usage: find_replace find_str replace_str dir
+find_replace(){
+  # mac sed treats -i differently than gnu sed
+  if [ `uname` = 'Darwin' ]; then
+    grep -r -l "$1" ${3-.} | xargs -t sed -i '' s/$1/$2/g
+  else
+    grep -r -l "$1" ${3-.} | xargs -t sed -i s/$1/$2/g
+  fi
 }
 
 # create file and corresponding spec in rails project
