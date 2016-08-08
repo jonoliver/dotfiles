@@ -1,0 +1,10 @@
+ls
+watch cat morecodehere.rb
+watch more morecodehere.rb
+cd ..
+cd ..
+cd ..
+grep -r "plans_list" .
+grep -r "Controller" .
+cd ../../..
+grep -r "Yes," .

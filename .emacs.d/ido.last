@@ -1,0 +1,66 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/just4me_infra/files/" . "default/")
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/just4me_infra/" . "files/")
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/files/" . "default/")
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/test/integration/default/" . "serverspec/")
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/test/integration/" . "default/")
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/test/" . "integration/")
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/" . "files/")
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/" . "just4me_infra/")
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/" . "cookbooks/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/just4me_infra/files/default/"
+ "/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/just4me_infra/recipes/"
+ "/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/files/default/"
+ "/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/test/integration/default/serverspec/"
+ "/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/recipes/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "global_bashrc"
+ "passenger_nginx.rb"
+ "nginx_service_script"
+ "nginx.conf"
+ "default_spec.rb"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/just4me_infra/files/default/" (22380 10598 0 0) "nginx_service_script" "nginx.conf" "iptables" "global_bashrc" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/just4me_infra/files/" (22380 10598 0 0) "default/" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/just4me_infra/recipes/" (22380 10598 0 0) "users.rb" "ruby.rb" "passenger_nginx.rb" "nodejs.rb" "mysql.rb" "firewall.rb" "default.rb" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/just4me_infra/" (22380 19248 0 0) "Thorfile" "test/" "recipes/" "README.md" "metadata.rb" "Gemfile.lock" "Gemfile" "files/" "features/" "chefignore" "Berksfile.lock" "Berksfile" ".kitchen.yml" ".kitchen/" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/recipes/" (22388 12652 0 0) "users.rb~" "users.rb" "ruby.rb" "passenger_nginx.rb" "default.rb" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/files/default/" (22388 11154 0 0) "nginx_service_script" "nginx.conf~" "nginx.conf" "bash_profile" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/files/" (22386 53677 0 0) "default/" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/test/integration/default/serverspec/" (22381 23851 0 0) "default_spec.rb" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/test/integration/default/" (22381 23851 0 0) "serverspec/" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/test/integration/" (22381 23851 0 0) "helpers/" "default/" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/test/" (22381 23851 0 0) "integration/" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/care4u_api/" (22386 53677 0 0) "Vagrantfile" "test/" "spec/" "recipes/" "README.md" "metadata.rb" "Gemfile.lock" "Gemfile" "files/" "chefignore" "Berksfile.lock" "Berksfile" ".vagrant/" ".kitchen.yml" ".kitchen/" ".gitignore" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/cookbooks/" (22381 38620 0 0) "pomiet_vpn_server/" "mock_ffm_commit_stage/" "memberportal_infra/" "just4me_uat/" "just4me_infra/" "just4me_commit_stage/" "just4me_browserstack/" "cs_auth_server/" "care4u_web_commit_stage/" "care4u_web/" "care4u_uat/" "care4u_api_commit_stage/" "care4u_api/" ".kitchen/" "../" "./")
+
+ ("/Users/jonoliver/Documents/pomiet/just4me_chef/" (22387 57200 0 0) "README.md" "cookbooks/" ".rubocop.yml" ".kitchen/" ".gitignore" ".git/" ".chef/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
