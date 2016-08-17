@@ -6,10 +6,8 @@ install_ruby(){
   git clone --depth 1 git://github.com/wayneeseguin/rvm.git && \
   cd rvm && ./install
 
-  rubyversion='2.1.1'
-  echo "Installing Ruby $rubyversion ..."
-  rvm install "$rubyversion"
-  rvm --default "$rubyversion"
+  echo "Installing latest Ruby"
+  rvm install ruby --latest
 }
 
 install_rubygems(){
@@ -22,8 +20,7 @@ install_rubygems(){
 
 install_homebrew(){
   echo 'Installing homebrew...'
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   # Make sure we’re using the latest Homebrew
   brew update
 
@@ -34,12 +31,12 @@ install_homebrew(){
 
   for pkg in $@; do
     brew install $pkg
-  done  
+  done
 
   brew tap homebrew/versions
 
   # Remove outdated versions from the cellar
-  brew cleanup 
+  brew cleanup
 }
 
 install_npm_global(){
