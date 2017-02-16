@@ -11,8 +11,8 @@ curl "https://raw.githubusercontent.com/jonoliver/dotfiles/master/script/install
 The above command will do the following:
 
 - Install oh-my-zsh at `~/.oh-my-zsh` (if not already installed)
-- Install dotfiles at `~/dotfiles` (backing up any existing "dotfiles" directory)
-- Symlink `~/dotfiles/zshrc` to `~/.zshrc` (backing up any existing ".zshrc" file)
+- Install dotfiles at `~/.dotfiles` (backing up any existing "dotfiles" directory)
+- Symlink `~/.dotfiles/zshrc` to `~/.zshrc` (backing up any existing ".zshrc" file)
 
 ####That's nice, but let's install some cool stuff!
 ```
