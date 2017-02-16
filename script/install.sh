@@ -26,11 +26,11 @@ install_zsh(){
 }
 
 install_dotfiles(){
-  DOT=$HOME/dotfiles
+  DOT=$HOME/.dotfiles
   echo "Installing dotfiles"
 
   # backup any existing dotfiles folder,.zshrc, etc...
-  bak $HOME/dotfiles
+  bak $HOME/.dotfiles
   bak $HOME/.zshrc
   bak $HOME/.tmux.conf
   #bak $HOME/.ssh/config

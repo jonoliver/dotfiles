@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 # Path to dotfiles
-DOTFILES=$HOME/dotfiles
+DOTFILES=$HOME/.dotfiles
 ZSH_CUSTOM="$DOTFILES/custom"
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf $HOME/dotfiles
+rm -rf $HOME/.dotfiles
 rm -rf $HOME/.oh-my-zsh
 rm .zshrc
 rm .tmux.conf
