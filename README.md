@@ -34,7 +34,7 @@ The above command will install lots of useful stuff, including:
   - [Yeoman](http://yeoman.io/)
   - [CoffeeScript](http://coffeescript.org/)
   - [MongoDB](https://www.mongodb.org/)
-  - [Mocha](http://visionmedia.github.io/mocha/)
+  - [Mocha](http://mochajs.org/)
   - [Express](http://expressjs.com/)
 
 ## Features
