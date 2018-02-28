@@ -19,17 +19,27 @@ machine_details(){
 show_ruby_version(){
 # based on eastwood theme(s)
 # RVM settings
-if [[ -s ~/.rvm/scripts/rvm ]] ; then 
+if [[ -s ~/.rvm/scripts/rvm ]] ; then
   echo $(~/.rvm/bin/rvm-prompt)
 else
   if which rbenv &> /dev/null; then
     echo $(rbenv version | sed -e 's/ (set.*$//')
   fi
-fi  
+fi
+}
+
+show_node_version(){
+  echo $(node -v)
 }
 
 right_prompt(){
   local output=''
+  if [ "$THEME_NODEVERSION" = true ]; then
+    output+="%{$fg[yellow]%}"
+    output+=$(show_node_version)
+    output+="%{$reset_color%}"
+  fi
+
   if [ "$THEME_RUBYVERSION" = true ]; then
     output+="%{$fg[yellow]%}"
     output+=$(show_ruby_version)
@@ -66,7 +76,7 @@ git_custom_status() {
 }
 
 local ret_status="%(?:%{$fg[green]%}❯:%{$fg[red]%}❯)%{$reset_color%}"
-PROMPT='%{$fg[cyan]%}%~%  %{$reset_color%}$(git_custom_status) 
+PROMPT='%{$fg[cyan]%}%~%  %{$reset_color%}$(git_custom_status)
 $(machine_details)$ret_status '
 
 #SHOWTIME=false
