@@ -64,6 +64,7 @@ alias gs='git show'
 # Show diff of a commit (filenames only)
 alias gsn='git show --name-only'
 alias gdc='git diff --cached'
+alias st='tig status'
 alias i='tig'
 # Tree
 #always use color
