@@ -90,7 +90,8 @@ alias tmc="tmux showb | pbcopy"
 
 # Npm
 alias ns="npm start"
-alias ni="sudo npm install"
+alias nt="npm test"
+alias ni="npm install"
 
 # Ruby
 alias gmi="sudo gem install"
