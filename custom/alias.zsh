@@ -39,6 +39,8 @@ alias zshrc="edit $DOTFILES/zshrc"
 
 alias c="clear"
 alias l='ls -lAh'
+alias lg='l | grep'
+
 # Git
 # Most aliases are added by the oh-my-zsh git plugin
 alias gi='git init'
