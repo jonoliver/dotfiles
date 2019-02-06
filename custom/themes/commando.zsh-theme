@@ -41,6 +41,9 @@ right_prompt(){
   fi
 
   if [ "$THEME_RUBYVERSION" = true ]; then
+    if [ ! "$output" = '' ]; then
+      output+='  '
+    fi
     output+="%{$fg[yellow]%}"
     output+=$(show_ruby_version)
     output+="%{$reset_color%}"
