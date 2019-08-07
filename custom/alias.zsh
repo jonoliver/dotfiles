@@ -68,6 +68,8 @@ alias gsn='git show --name-only'
 alias gdc='git diff --cached'
 alias st='tig status'
 alias i='tig'
+alias gpf='git push --force-with-lease'
+
 # Tree
 #always use color
 alias tree='tree -C'
