@@ -69,6 +69,7 @@ alias gdc='git diff --cached'
 alias st='tig status'
 alias i='tig'
 alias gpf='git push --force-with-lease'
+alias gbg='git branch | grep'
 
 # Tree
 #always use color
