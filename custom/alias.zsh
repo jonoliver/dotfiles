@@ -141,6 +141,17 @@ alias rspjsd='rspec -cfd'
 alias rspw='rspec -c -t wip'
 alias rspwd='rspec -cfd -t wip'
 
+# docker
+alias dps='docker ps'
+alias dim='docker images'
+alias ddc='docker-compose'
+alias dl='docker logs'
+alias dr='docker run'
+
+function dsh(){
+  docker exec -it "$@" /bin/bash
+}
+
 # Coffeescript
 #compile coffeescript w/ map
 alias co="coffee -cm"
