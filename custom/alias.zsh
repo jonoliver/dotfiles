@@ -80,6 +80,7 @@ alias ta='tree -aI ".git"'
 # show hidden files in tree, including .git folder
 alias tag='tree -a'
 alias gsta='git stash'
+alias ghst="git for-each-ref --sort=-committerdate --count=10 --format='%(refname:short)' refs/heads/"
 # Less
 alias le="less"
 
