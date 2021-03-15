@@ -72,6 +72,7 @@ alias gpf='git push --force-with-lease'
 alias gbg='git branch | grep'
 alias remotereset='git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard "origin/$(git rev-parse --abbrev-ref HEAD)"'
 alias rr='remotereset'
+alias nom='npm'
 
 # Tree
 #always use color
