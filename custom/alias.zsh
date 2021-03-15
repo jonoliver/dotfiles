@@ -70,6 +70,8 @@ alias st='tig status'
 alias i='tig'
 alias gpf='git push --force-with-lease'
 alias gbg='git branch | grep'
+alias remotereset='git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard "origin/$(git rev-parse --abbrev-ref HEAD)"'
+alias rr='remotereset'
 
 # Tree
 #always use color
@@ -126,7 +128,6 @@ alias dbm='rake db:migrate'
 alias dbs='rake db:seed'
 alias dbd='rake db:drop'
 alias dbc='rake db:create'
-alias rr='bundle exec rake'
 alias rsa='bundle exec rake spec:all'
 alias rsi='bundle exec rake spec:integration'
 alias rst='bundle exec rake teaspoon'
