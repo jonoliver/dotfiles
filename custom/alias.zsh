@@ -93,9 +93,13 @@ alias tmr="tmuxinator"
 alias tmk="tmux kill-session -t"
 alias tmka="killall tmux"
 # copy to clipboard
-alias tmc="tmux showb | pbcopy"
-#kill all tmux sessions
-# alias tmk="tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}"
+# alias tmc="tmux showb | pbcopy"
+
+function tmc(){
+  COLOR=$(jq '."workbench.colorCustomizations"."titleBar.activeBackground"' -r .vscode/settings.json)
+  tmux set-option pane-active-border-bg $COLOR
+  tmux set-option pane-border-fg $COLOR
+}
 
 # Npm
 alias ns="npm start"
