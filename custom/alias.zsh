@@ -71,6 +71,7 @@ alias i='tig'
 alias gpf='git push --force-with-lease'
 alias gbg='git branch | grep'
 alias remotereset='git fetch origin $(git rev-parse --abbrev-ref HEAD) && git reset --hard "origin/$(git rev-parse --abbrev-ref HEAD)"'
+alias forcechange='(SHA="$(git rev-parse HEAD)" && git reset HEAD~ --hard && git cherry-pick $SHA)'
 alias rr='remotereset'
 alias nom='npm'
 
@@ -146,6 +147,7 @@ alias rspw='rspec -c -t wip'
 alias rspwd='rspec -cfd -t wip'
 
 # docker
+alias dk='docker'
 alias dps='docker ps'
 alias dim='docker images'
 alias ddc='docker-compose'
@@ -197,9 +199,9 @@ alias ssql="mysql.server stop"
 
 # Open github (must set GH_USERNAME variable)
 # Accepts argument for project
-alias gh=github
+# alias gh=github
 github(){ open "https://github.com/$GH_USERNAME/$@" }
-alias hb='hub browse'
+alias quickdev='npx browser-sync start --server --files="*"'
 # functions
 
 # google search from command line
@@ -294,4 +296,8 @@ loadnvm(){
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+}
+
+certchain(){
+  openssl s_client -showcerts -servername $@ -connect $@:443
 }
