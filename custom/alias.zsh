@@ -212,6 +212,14 @@ function ggl() {
   open "https://www.google.com/search?hl=en#q=$encodedarg"
 }
 
+# WHY DOES OH-MY-ZSH DO THIS?
+# Too easy to typo `ggf` when you mean `gf` for git fetch
+# unset so I don't accidentally force push when trying to fetch
+#https://github.com/ohmyzsh/ohmyzsh/blob/6e9cda3d30d8e73c11e4d32044b7f4c5e06f822d/plugins/git/git.plugin.zsh#L298-L302
+function ggf(){
+  echo "Did you mean to run gf?" && return 1;
+}
+
 # make a directory and cd into it
 mkcd() { mkdir -p "$@" && cd "$_"; }
 
