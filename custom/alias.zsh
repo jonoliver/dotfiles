@@ -125,7 +125,6 @@ alias rvdu='rvm --default use'
 #rails
 alias ss='bundle exec rails server'
 alias rc='rails console'
-alias rg='rails generate'
 
 #rake
 alias be='bundle exec'
