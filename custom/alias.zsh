@@ -308,3 +308,5 @@ loadnvm(){
 certchain(){
   openssl s_client -showcerts -servername $@ -connect $@:443
 }
+
+killport(){ kill -9 $(lsof -t -i :$@) }
